@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+*.ipynb
+
+# Node / React
+node_modules/
+dist/
+.env
+
+# Model files (uploaded to HuggingFace instead)
+*.gguf
+*.ckpt
+*.pt
+
+# Data & logs
+ham10000/
+.cache/
+chat_logs/
+chat_history/
+chat_log.txt
