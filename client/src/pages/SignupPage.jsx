@@ -36,7 +36,7 @@ export default function SignupPage() {
       const res = await axios.post('http://localhost:5000/api/auth/verify-otp', { ...form, otp })
       if (res.status === 201) {
         alert('Registered successfully! Please login.')
-        navigate('/login')
+        navigate('/chat')
       }
     } catch (err) {
       setServerMessage(err.response?.data?.message || 'OTP verification failed')

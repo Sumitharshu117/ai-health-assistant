@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken')
-const User = require('../models/User')
+import jwt from 'jsonwebtoken';
+import User from '../models/User';
 
 module.exports = async (req, res, next) => {
   // Get token from header
@@ -12,9 +12,9 @@ module.exports = async (req, res, next) => {
 
   // Verify token
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET)
-    req.user = await User.findById(decoded.id).select('-password')
-    next()
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await User.findById(decoded.id).select('-password');
+    next();
   } catch (error) {
     res.status(401).json({ message: 'Token is not valid' })
   }

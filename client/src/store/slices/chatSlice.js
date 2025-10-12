@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import axios from 'axios' // ✅ Important for sendMessage()
+import axios from 'axios' // ✅ Important for sendMessage() to backend 
 
 const initialState = {
   messages: [],
@@ -101,6 +101,8 @@ export const {
   deleteMessagePair
 } = chatSlice.actions
 
+
+// this are basically thunks
 // ✅ Send message to backend with message + lang
 export const sendMessage = ({ message, lang, userId }) => async (dispatch) => {
   try {
