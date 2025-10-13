@@ -23,20 +23,20 @@ const sendNewMessage=async (req, res) => {
       return res.status(400).json({ message: 'Invalid message format' })
     }
 
-    // Find or create chat for the user
+    // Finding or creating chat for the user
     let chat = await Chat.findOne({ user: req.user.id })
     if (!chat) {
       chat = await Chat.create({ user: req.user.id, messages: [] })
     }
 
-    // Add user message to chat
+    // Adding user message to chat
     chat.messages.push({ text: message, sender: 'user' })
     await chat.save()
 
-    // Get AI response
+    // Getting AI response
     const aiResponse = await getAIResponse(message)
 
-    // Add AI response to chat
+    // Adding AI response to chat
     chat.messages.push({ text: aiResponse.response, sender: 'ai' })
 
     // If there's a diagnosis, add it to the chat
