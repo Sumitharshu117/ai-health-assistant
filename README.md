@@ -147,6 +147,6 @@ ai-health-assistant/
 
 ## 🙌 Author
 
-**Yogesh Yadav**  
-📧 yogeshchitosiya29@gmail.com  
-🔗 https://github.com/Yogesh297/ai-health-assistant
+**sumit kumar**  
+📧 sumitsharmavashisth1000@gmail.com
+🔗 (https://github.com/Sumitharshu117/ai-health-assistant)
