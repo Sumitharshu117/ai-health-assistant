@@ -62,7 +62,7 @@ This project simulates an AI-powered health assistant designed to **help users e
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Yogesh297/ai-health-assistant.git
+git clone https://github.com/Sumitharshu117/ai-health-assistant.git
 cd ai-health-assistant
 ```
 
